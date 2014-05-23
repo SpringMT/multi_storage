@@ -1,7 +1,5 @@
 # MultiStorage [![Build Status](https://travis-ci.org/SpringMT/multi_storage.svg?branch=master)](https://travis-ci.org/SpringMT/multi_storage)
 
-TODO: Write a gem description
-
 ## Installation
 
 Add this line to your application's Gemfile:
