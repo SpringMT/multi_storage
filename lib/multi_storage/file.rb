@@ -17,7 +17,7 @@ class MultiStorage
       stored_file_path = "#{@root_path}/#{stored_path}"
       stored_dir = ::File.dirname stored_file_path
       FileUtils.mkdir stored_dir unless Dir.exist? stored_dir
-      # 上書きする
+      # over write
       ::File.open(stored_file_path, 'wb') { |f| f.write(body) }
     end
 

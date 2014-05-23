@@ -26,7 +26,6 @@ class MultiStorage
 
   def create(nonce, body)
     digested_file_path = get_digested_file_path(nonce)
-    # create
     @devices.each do |device|
       res = device.create(digested_file_path, body)
       @logger.info res.inspect
@@ -37,7 +36,6 @@ class MultiStorage
 
   def delete(nonce)
     digested_file_path = get_digested_file_path(nonce)
-    # delete
     @devices.each do |device|
       res = device.delete digested_file_path
       @logger.info res.inspect

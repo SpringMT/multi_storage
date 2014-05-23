@@ -3,7 +3,6 @@ require 'multi_storage/base'
 
 class MultiStorage
   class S3 < Base
-    # root_pathにはenvを入れて下さい
     def initialize(options = {})
       @root_path          = options[:s3_root]           || fail('require s3_root')
       access_key_id       = options[:access_key_id]     || fail('require access_key_id')
@@ -25,7 +24,7 @@ class MultiStorage
 
     def create(stored_path, body)
       stored_s3_path = "#{@root_path}/#{stored_path}"
-      # 上書きする
+      # over write
       @s3.put_object(bucket: @bucket, key: stored_s3_path, body: body)
     end
 
