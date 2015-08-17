@@ -43,7 +43,7 @@ describe MultiStorage do
     context 'valid' do
       subject { MultiStorage.new(%w(Mock Mock)) }
       it do
-        expect(subject.delete(nonce)).to be_true
+        expect(subject.delete(nonce)).to be_truthy
       end
     end
   end
